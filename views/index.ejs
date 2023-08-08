@@ -1,0 +1,44 @@
+<%- include('layout/header') %>
+
+<div class="container">
+    <div class="row my-4">
+        <div class="col-log-12"> 
+            <% if(message) { %>
+                <div class="alert alert-dismissible fade show alert-<%= message.type %>"
+                  role="alert">
+                  <button class="btn-close" type="button" data-bs-dissmiss="alert"  aria-label="close"></button>
+                  <strong><%= message.message %></strong>
+                </div>
+            <% } %>
+            <div class="table-responsive">
+                <table class="table table-striped text-center">
+                    <thead>
+                        <tr class="table-dark">
+                            <th>ID</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>E-mail</th>
+                            <th>Phone</th>
+                            <th>Note</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td>1</td>
+                        <td><img src="" alt=""></td>
+                        <td>heba waheed</td>
+                        <td>heba@icloud.com</td>
+                        <td>01100111111</td>
+                        <td>this is my frist note</td>
+                        <td>
+                            <a href="" class="text-success"><i class="fa-solid fa-pen-to-square mx-1"></i></a>
+                            <a href="" class="text-danger"><i class="fa-solid fa-trash"></i></a>
+                        </td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('layout/footer') %>
